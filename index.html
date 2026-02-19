@@ -2,43 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Review - Expert Feedback for Your Success</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="booking.html">Order Review</a></li>
-            <li><a href="admin.php">Админка (CRUD)</a></li>
-        </ul>
-    </nav>
+    <canvas id="particleCanvas"></canvas>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">ReviewFlow</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Services</a></li>
+                    <li><a href="admin.php" style="color: #f59e0b; font-weight: 600;">Admin</a></li>
+                    <li><a href="booking.html" class="nav-btn">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="content fade-in">
-        <h1>Boost Your Student Portfolio</h1>
-        <p>Get your portfolio checked by experts before applying to uni!</p>
-        
-       <a href="booking.html">
-    <img src="image.png" alt="Portfolio Image" class="promo-img">
-</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Get Expert Feedback on Your Portfolio</h1>
+                <p>Stand out from the competition with professional portfolio reviews. Our experts will give you actionable feedback to improve your work.</p>
+                <a href="booking.html" class="btn btn-primary">Start Your Review</a>
+            </div>
+            <div class="hero-image">
+                <img src="image.png?v=2" alt="Portfolio Review" class="hero-img">
+            </div>
+        </section>
 
-        <h2>Our Services</h2>
-        <table class="price-table">
-            <tr>
-                <th>Service</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Basic Review</td>
-                <td>$15</td>
-            </tr>
-            <tr>
-                <td>Deep Analysis</td>
-                <td>$30</td>
-            </tr>
-        </table>
+        <!-- Services Section -->
+        <section class="services">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Choose the perfect package for your needs</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Basic Review</h3>
+                        <span class="badge">Popular</span>
+                    </div>
+                    <div class="price">$15</div>
+                    <p class="price-desc">Great for first feedback</p>
+                    <ul class="features">
+                        <li>✓ Portfolio Assessment</li>
+                        <li>✓ Written Feedback</li>
+                        <li>✓ 3-Day Delivery</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-secondary">Choose Plan</a>
+                </div>
 
-        <a href="booking.html" class="btn">Order Now</a>
-    </div>
+                <div class="pricing-card featured">
+                    <div class="card-header">
+                        <h3>Deep Analysis</h3>
+                        <span class="badge premium">Best Value</span>
+                    </div>
+                    <div class="price">$30</div>
+                    <p class="price-desc">Comprehensive review & guidance</p>
+                    <ul class="features">
+                        <li>✓ Complete Analysis</li>
+                        <li>✓ Detailed Video Feedback</li>
+                        <li>✓ 24-Hour Delivery</li>
+                        <li>✓ One Follow-up Session</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Expert Feedback</h3>
+                    <p>Professional feedback from experienced reviewers</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Get feedback within your chosen timeframe</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📈</div>
+                    <h3>Actionable Advice</h3>
+                    <p>Practical tips you can implement immediately</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Confidential</h3>
+                    <p>Your portfolio is completely private and secure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <h2>Ready to Improve Your Portfolio?</h2>
+            <p>Get professional feedback today</p>
+            <a href="booking.html" class="btn btn-primary btn-large">Order Your Review Now</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 ReviewFlow. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

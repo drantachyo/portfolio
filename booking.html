@@ -2,42 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Portfolio Review - ReviewFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="booking.html">Order Review</a></li>
-        </ul>
-    </nav>
-
-    <div class="content fade-in">
-        <h2>Place Your Order</h2>
-        <form id="orderForm" action="db.php" method="POST">
-            
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" class="input-field">
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" class="input-field">
-
-            <label>Choose Service (Dropdown):</label>
-            <select name="service_type" class="input-field">
-                <option value="Basic">Basic Review</option>
-                <option value="Deep">Deep Analysis</option>
-            </select>
-
-            <label>Urgency (Radio Buttons):</label>
-            <div class="radio-group">
-                <input type="radio" name="urgency" value="Normal" checked> Normal (3 days)
-                <input type="radio" name="urgency" value="Urgent"> Urgent (24 hours)
+    <canvas id="particleCanvas"></canvas>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">ReviewFlow</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Services</a></li>
+                    <li><a href="admin.php" style="color: #f59e0b; font-weight: 600;">Admin</a></li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-            <button type="submit" class="btn">Submit Order</button>
-        </form>
-    </div>
+    <main>
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Book Your Portfolio Review</h1>
+                    <p>Fill in your details and we'll get started on your feedback right away</p>
+                </div>
+
+                <form id="orderForm" action="db.php" method="POST" class="modern-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="input-field" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="input-field" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Review Package</label>
+                        <div class="select-wrapper">
+                            <select name="service_type" class="input-field" required>
+                                <option value="">Select a package...</option>
+                                <option value="Basic">Basic Review - $15</option>
+                                <option value="Deep">Deep Analysis - $30</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Turnaround Time</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="Normal" checked>
+                                <span class="radio-custom"></span>
+                                <span>Standard - 3 Days</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="Urgent">
+                                <span class="radio-custom"></span>
+                                <span>Express - 24 Hours (+$5)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Complete Booking</button>
+                </form>
+
+                <div class="form-info">
+                    <p>✓ Secure payment processing • ✓ 100% satisfaction guarantee • ✓ No hidden fees</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 ReviewFlow. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

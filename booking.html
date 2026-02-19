@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Order Review</a></li>
+        </ul>
+    </nav>
+
+    <div class="content fade-in">
+        <h2>Place Your Order</h2>
+        <form id="orderForm" action="db.php" method="POST">
+            
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="input-field">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" class="input-field">
+
+            <label>Choose Service (Dropdown):</label>
+            <select name="service_type" class="input-field">
+                <option value="Basic">Basic Review</option>
+                <option value="Deep">Deep Analysis</option>
+            </select>
+
+            <label>Urgency (Radio Buttons):</label>
+            <div class="radio-group">
+                <input type="radio" name="urgency" value="Normal" checked> Normal (3 days)
+                <input type="radio" name="urgency" value="Urgent"> Urgent (24 hours)
+            </div>
+
+            <button type="submit" class="btn">Submit Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
